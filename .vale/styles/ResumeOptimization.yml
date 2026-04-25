@@ -1,0 +1,133 @@
+---
+# Resume-specific Vale style
+# Focus on ATS optimization and professional impact
+
+extends:
+  - existence
+  - consistency
+  - readability
+
+# ATS Optimization Rules
+ruletypes:
+  - alert
+  - suggestion
+
+# Action verbs for impact statements
+actionVerbs:
+  description: "Use strong action verbs for impact"
+  extends: existence
+  message: "Consider using a stronger action verb like '%s'"
+  level: suggestion
+  tokens:
+    - managed
+    - led
+    - developed
+    - implemented
+    - architected
+    - deployed
+    - optimized
+    - automated
+    - scaled
+    - reduced
+    - improved
+    - increased
+    - achieved
+    - delivered
+    - created
+    - built
+    - designed
+    - engineered
+    - coordinated
+    - executed
+    - spearheaded
+    - pioneered
+    - established
+    - launched
+
+# Quantified achievements
+quantified:
+  description: "Include quantifiable metrics"
+  extends: existence
+  message: "Consider adding metrics (%, $, numbers) to quantify this achievement"
+  level: suggestion
+  tokens:
+    - reduced
+    - improved
+    - increased
+    - decreased
+    - optimized
+    - enhanced
+    - accelerated
+    - streamlined
+    - eliminated
+
+# Weasel words to avoid
+weaselWords:
+  description: "Avoid weasel words that weaken impact"
+  extends: existence
+  message: "Remove weasel word '%s' for stronger impact"
+  level: warning
+  tokens:
+    - very
+    - quite
+    - rather
+    - somewhat
+    - fairly
+    - pretty
+    - extremely
+    - really
+    - actually
+    - basically
+    - generally
+    - usually
+    - typically
+    - often
+    - frequently
+    - sometimes
+    - occasionally
+    - might
+    - could
+    - would
+    - should
+    - perhaps
+    - possibly
+    - probably
+
+# Passive voice indicators
+passiveVoice:
+  description: "Use active voice for stronger impact"
+  extends: readability
+  message: "Use active voice instead of passive voice"
+  level: suggestion
+  style: passive
+
+# Length optimization for ATS
+summaryLength:
+  description: "Keep summary concise for ATS"
+  extends: readability
+  message: "Summary should be under 300 characters for optimal ATS parsing"
+  level: warning
+  scope: summary
+  max: 300
+
+# Technical term consistency
+techTerms:
+  description: "Use consistent technical terminology"
+  extends: consistency
+  message: "Use consistent technical term '%s'"
+  level: suggestion
+  ignorecase: true
+  nonword: false
+  tokens:
+    - Kubernetes
+    - kubernetes
+    - K8s
+    - k8s
+    - DevOps
+    - devops
+    - SRE
+    - sre
+    - CI/CD
+    - cicd
+    - GitOps
+    - gitops

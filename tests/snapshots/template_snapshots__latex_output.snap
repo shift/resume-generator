@@ -1,0 +1,74 @@
+---
+source: tests/template_snapshots.rs
+expression: latex
+---
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.75]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\microtypesetup{expansion=false}
+
+% Personal information
+\name{ Test User }{ }
+
+\address{  }
+\phone{  }
+\email{ test@example.com }
+
+
+\begin{document}
+\makecvtitle
+
+
+\section{Summary}
+Test summary for snapshot.
+
+
+
+\section{Work Experience}
+
+\cventry{2020}{Engineer}{Test Corp}{  }{ Present }{  }
+
+
+\hspace*{1em}\textbullet{} Led a team of 5.
+
+
+
+
+
+
+
+
+
+\section{Skills}
+
+\textbf{ Testing: } Rust, proptest
+
+
+
+
+\section{Open Source Projects}
+
+\cventry{}{test-project}{  }{  }{ Present }{ A test project. }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

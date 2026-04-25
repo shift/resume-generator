@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.basics.name }} - Clean Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            line-height: 1.6; 
+            color: #2c3e50; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 60px 40px;
+            background: #ffffff;
+        }
+        
+        .resume {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px;
+            position: relative;
+        }
+        
+        .header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-bottom: 3px solid #e1e4e8; 
+            padding-bottom: 30px;
+        }
+        
+        .name { 
+            font-size: 2.5em; 
+            font-weight: 700; 
+            color: #2c3e50; 
+            letter-spacing: -1px;
+        }
+        
+        .contact { 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item { 
+            background: #f8f9fa; 
+            padding: 12px 24px; 
+            border-radius: 50px; 
+            border: 1px solid #e1e4e8; 
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .section-title { 
+            font-size: 1.8em; 
+            font-weight: 700; 
+            color: #2c3e50; 
+            margin: 40px 0 20px; 
+            position: relative; 
+        }
+        
+        .section-title::after { 
+            content: '';
+            position: absolute; 
+            left: 0; 
+            bottom: -10px; 
+            width: 60px; 
+            height: 3px; 
+            background: #3498db;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .experience-item { 
+            margin-bottom: 30px; 
+            padding: 25px;
+            border-left: 3px solid #3498db;
+            background: #fafafa;
+        }
+        
+        .item-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            margin-bottom: 20px;
+        }
+        
+        .item-info { 
+            flex: 1; 
+        }
+        
+        .item-title { 
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #2c3e50; 
+            margin-bottom: 8px;
+        }
+        
+        .item-subtitle { 
+            color: #6c757d; 
+            font-size: 1.1em; 
+            margin-bottom: 8px;
+        }
+        
+        .item-date { 
+            color: #6c757d; 
+            font-weight: 500; 
+            font-size: 0.9em; 
+        }
+        
+        .item-details { 
+            color: #495057; 
+            margin-bottom: 15px; 
+        }
+        
+        .skills { 
+            margin-top: 40px; 
+        }
+        
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px;
+        }
+        
+        .skill-category { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 6px; 
+            border: 1px solid #e1e4e8;
+        }
+        
+        .skill-name { 
+            font-weight: 600; 
+            color: #2c3e50; 
+            margin-bottom: 12px; 
+            font-size: 1.1em; 
+        }
+        
+        .skill-keywords { 
+            color: #495057; 
+            font-size: 0.9em; 
+            line-height: 1.4;
+        }
+        
+        .keyword { 
+            display: inline-block; 
+            background: #3498db; 
+            color: white; 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            margin: 2px 4px; 
+            font-size: 0.85em;
+        }
+        
+        @media (max-width: 768px) {
+            body { 
+                padding: 40px 20px; 
+            }
+            
+            .resume { 
+                padding: 30px; 
+                margin: 0 20px; 
+            }
+            
+            .experience-item { 
+                padding: 20px; 
+                margin-bottom: 20px; 
+            }
+            
+            .skills-grid { 
+                grid-template-columns: 1fr; 
+            }
+        }
+        
+        @media print { 
+            body { 
+                background: white; 
+                color: black; 
+                font-size: 12pt; 
+                line-height: 1.3; 
+                padding: 20px; 
+            }
+            
+            .resume { 
+                box-shadow: none; 
+                border: 1px solid #ddd; 
+                margin: 0; 
+                padding: 0; 
+                max-width: 100%; 
+            }
+            
+            .experience-item { 
+                page-break-inside: avoid; 
+                border: 1px solid #ddd; 
+                background: white; 
+                margin-bottom: 15px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <header class="header">
+            <h1 class="name">{{ resume.basics.name }}</h1>
+            
+            <div class="contact">
+                {% if resume.basics.email %}
+                <div class="contact-item">
+                    <div>📧 <a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a></div>
+                </div>
+                {% endif %}
+                {% if resume.basics.phone %}
+                <div class="contact-item">
+                    <div>📱 {{ resume.basics.phone }}</div>
+                </div>
+                {% endif %}
+                {% if resume.basics.url %}
+                <div class="contact-item">
+                    <div>🌐 <a href="{{ resume.basics.url }}">{{ resume.basics.url }}</a></div>
+                </div>
+                {% endif %}
+                {% for profile in resume.basics.profiles %}
+                <div class="contact-item">
+                    <div>{{ profile.network }}: {{ profile.username }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </header>
+
+        {% if resume.basics.summary %}
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="item-details">{{ resume.basics.summary }}</div>
+        </section>
+        {% endif %}
+        
+        {% if resume.work %}
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            {% for job in resume.work %}
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-info">
+                        <div>
+                            <div class="item-title">{{ job.position }}</div>
+                            <div class="item-subtitle">{{ job.name }}{% if job.location %}, {{ job.location }}{% endif %}</div>
+                        </div>
+                        <div class="item-date">
+                            {{ job.startDate }} – {% if job.endDate %}{{ job.endDate }}{% else %}Present{% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                {% if job.summary %}
+                <div class="item-details">
+                    {{ job.summary }}
+                </div>
+                {% endif %}
+                
+                {% if job.highlights %}
+                <div class="item-details">
+                    {% for highlight in job.highlights %}
+                    {{ highlight }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+        
+        {% if resume.skills %}
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills">
+                <div class="skills-grid">
+                    {% for skill in resume.skills %}
+                    <div class="skill-category">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-keywords">
+                            {% for keyword in skill.keywords %}
+                                <span class="keyword">{{ keyword }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

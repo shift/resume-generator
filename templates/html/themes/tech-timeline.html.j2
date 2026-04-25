@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.basics.name }} - Tech Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary-color: #0f4c81;
+            --secondary-color: #6c757d;
+            --accent-color: #00bcd4;
+            --text-color: #333;
+            --bg-color: #ffffff;
+            --border-color: #e1e4e;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        body { 
+            font-family: 'SF Pro Display', 'Roboto Mono', monospace; 
+            line-height: 1.6; 
+            color: var(--text-color); 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 60px 100px; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f5fd 100%);
+            background-attachment: fixed;
+        }
+        
+        .tech-resume {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .header { 
+            text-align: center; 
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .name { 
+            font-size: 2.8em; 
+            font-weight: 300; 
+            font-family: 'SF Pro Display', monospace;
+            letter-spacing: 0.05em;
+            color: var(--bg-color);
+            background: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .contact { 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item { 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 8px 12px; 
+            border: 1px solid var(--border-color); 
+            border-radius: 4px;
+            color: var(--text-color);
+            font-family: 'SF Pro Display', monospace;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover { 
+            background: var(--accent-color); 
+            color: var(--bg-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+        
+        .section { 
+            margin-bottom: 50px; 
+        }
+        
+        .section-title { 
+            font-size: 1.5em; 
+            font-weight: 700; 
+            color: var(--primary-color); 
+            margin-bottom: 30px; 
+            position: relative; 
+            display: inline-block;
+        }
+        
+        .section-title::after { 
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            bottom: -8px; 
+            width: 60px; 
+            height: 2px; 
+            background: var(--accent-color); 
+            border-radius: 2px;
+        }
+        
+        .tech-item { 
+            margin-bottom: 30px; 
+            padding: 25px; 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid var(--border-color); 
+            border-radius: 6px; 
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-item::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            background: var(--border-color);
+            transform: scaleX(1); 
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-item::after { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            background: var(--border-color); 
+            transform: scaleX(1); 
+            animation: techGlow 1.5s infinite alternate;
+        }
+        
+        .tech-label { 
+            font-family: 'SF Pro Display', monospace; 
+            font-size: 0.75em; 
+            font-weight: 600; 
+            color: var(--accent-color); 
+            background: var(--bg-color);
+            padding: 4px 8px; 
+            border-radius: 3px; 
+            position: relative; 
+            z-index: 1;
+        }
+        
+        .tech-value { 
+            font-family: 'SF Pro Display', monospace; 
+            font-size: 0.95em; 
+            color: var(--text-color); 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 2px 6px; 
+            border-radius: 3px;
+            position: relative; 
+            z-index: 2;
+        }
+        
+        .timeline { 
+            position: relative; 
+            margin: 40px 0; 
+        }
+        
+        .timeline-line { 
+            position: absolute; 
+            left: 20px; 
+            top: 0; 
+            bottom: 0; 
+            width: 2px; 
+            height: 100%; 
+            background: var(--border-color);
+            z-index: 0;
+        }
+        
+        .timeline-content { 
+            position: relative; 
+            margin-left: 40px;
+        }
+        
+        .job-title { 
+            font-family: 'SF Pro Display', monospace; 
+            font-size: 1.1em; 
+            font-weight: 600; 
+            color: var(--primary-color); 
+            margin-bottom: 10px; 
+        }
+        
+        .job-company { 
+            font-family: 'SF Pro Display', monospace; 
+            font-size: 1em; 
+            color: var(--secondary-color); 
+            margin-bottom: 5px; 
+        }
+        
+        .job-period { 
+            font-family: 'SF Pro Display', monospace; 
+            font-size: 0.85em; 
+            color: var(--accent-color); 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 2px 6px; 
+            border-radius: 3px;
+        }
+        
+        @keyframes techGlow {
+            0%, 100% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="tech-resume">
+        <header class="header">
+            <div class="name">{{ resume.basics.name | upper }}</div>
+            <div class="contact">
+                {% if resume.basics.email %}
+                <div class="contact-item">
+                    <div><a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a></div>
+                </div>
+                {% endif %}
+                {% if resume.basics.phone %}
+                <div class="contact-item">
+                    <div>{{ resume.basics.phone }}</div>
+                </div>
+                {% endif %}
+                {% if resume.basics.url %}
+                <div class="contact-item">
+                    <div><a href="{{ resume.basics.url }}">{{ resume.basics.url }}</a></div>
+                </div>
+                {% endif %}
+                {% for profile in resume.basics.profiles %}
+                <div class="contact-item">
+                    <div>{{ profile.username }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </header>
+        
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-content">
+                {% for job in resume.work %}
+                <div class="tech-item">
+                    <div class="tech-label">{{ job.startDate }} – {% if job.endDate %}{{ job.endDate }}{% else %}Present{% endif %}</div>
+                    <div class="job-title">{{ job.position }}</div>
+                    <div class="job-company">@ {{ job.name }}</div>
+                </div>
+                
+                {% if job.summary %}
+                <div class="tech-value">{{ job.summary }}</div>
+                {% endif %}
+                
+                {% if job.highlights %}
+                {% for highlight in job.highlights %}
+                <div class="tech-value">• {{ highlight }}</div>
+                {% endfor %}
+                {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media print {
+            body { background: white; }
+            .tech-resume { border: none; box-shadow: none; }
+            .timeline { display: none; }
+            .timeline-content { margin: 0; padding: 0; }
+            .tech-item { margin-bottom: 15px; }
+            .tech-item::before, .tech-item::after { display: none; }
+        }
+    </style>
+</body>
+</html>

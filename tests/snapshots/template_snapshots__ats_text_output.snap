@@ -1,0 +1,45 @@
+---
+source: tests/template_snapshots.rs
+expression: text
+---
+Test User
+
+Email: test@example.com
+
+
+
+
+
+PROFESSIONAL SUMMARY
+Test summary for snapshot.
+
+WORK EXPERIENCE
+
+Engineer
+Test Corp, 
+2020 - Present
+
+
+
+
+
+• Led a team of 5.
+
+
+
+
+
+
+
+
+SKILLS
+
+Testing: Rust, proptest
+
+
+
+
+PROJECTS
+
+test-project
+A test project.

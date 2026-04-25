@@ -1,0 +1,570 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Vincent Palmer",
+    "label": "Staff Site Reliability Engineer & Platform Engineering Leader",
+    "image": "",
+    "email": "shift@someone.section.me",
+    "phone": "+49 173 2445094",
+    "url": "https://github.com/shift",
+    "summary": "Site Reliability Engineer & Platform Engineering leader with 30+ years experience scaling infrastructure from startups to Fortune 500 environments. Specialize in Kubernetes, distributed systems, and enterprise platform engineering with track record of successful architecture implementation.",
+    "location": {
+      "address": "Berlin, Germany",
+      "postalCode": "10115",
+      "city": "Berlin",
+      "countryCode": "DE",
+      "region": "Berlin"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "shift",
+        "url": "https://github.com/shift"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Independent Consultant & Architect",
+      "position": "Independent Consultant & Architect",
+      "startDate": "2024",
+      "endDate": "Present",
+      "summary": "Advised early-stage AI/Fintech startup on technical architecture, cloud infrastructure, and security practices under strict NDA.",
+      "highlights": [
+        "Designed foundational cloud architecture across 3 providers and a multi-region deployment model for a Series-A AI/Fintech startup, reducing projected infrastructure spend by ~40% before production launch.",
+        "Delivered security posture assessment covering zero-trust network design, supply chain security, and compliance readiness.",
+        "Prototyped AI-native development tooling now released as open source projects (Engram, Skylet)."
+      ],
+      "location": "Berlin, Germany"
+    },
+    {
+      "name": "MedTech Startup",
+      "position": "Chief Architect",
+      "startDate": "2023",
+      "endDate": "2024",
+      "summary": "Architected and led end-to-end implementation of greenfield prescription delivery platform, serving 10,000+ daily users with 99.95% uptime.",
+      "highlights": [
+        "Led cross-functional team of 8 engineers through complete platform lifecycle from concept to production deployment.",
+        "Directed architectural strategy for gematik-approved E-Rezept prescription management, achieving regulatory approval in 6 months.",
+        "Spearheaded French market expansion, implementing local compliance requirements and achieving 20% market penetration in first year."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "Feedzai SA",
+      "position": "Principal Kubernetes Engineer",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s.",
+      "highlights": [
+        "Pioneered Crossplane implementation for unified Infrastructure as Code platform, enabling seamless multi-cloud deployments across AWS, GCP, and on-premise with 40% reduction in provisioning time.",
+        "Transformed CI/CD and security paradigms, implementing software supply chain security (Attestations/SBOMs) and next-generation internal developer platform, reducing deployment time by 60%.",
+        "Established SRE practices including SLI/SLO design, error budget management, and automated incident response, reducing MTTR from 2 hours to 15 minutes."
+      ],
+      "location": "Coimbra"
+    },
+    {
+      "name": "Booming Games Ltd",
+      "position": "Head of Systems & Infrastructure",
+      "startDate": "2017",
+      "endDate": "2022",
+      "summary": "Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.",
+      "highlights": [
+        "Engineered hybrid infrastructure spanning 5+ bare-metal datacenters and public clouds (AWS, GKE), implementing bare-metal Kubernetes clusters achieving 50% cost savings compared to managed cloud services.",
+        "Established comprehensive observability framework with Prometheus, Grafana, and ELK Stack, providing real-time insights into system performance and reducing incident detection time by 80%.",
+        "Implemented chaos engineering practices and automated failure recovery systems, improving system resilience and reducing unplanned downtime by 90%."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "KIWI.KI GmbH",
+      "position": "Cloud Architect",
+      "startDate": "2016",
+      "endDate": "2017",
+      "summary": "Led complete zero-downtime migration of IoT infrastructure from legacy VMs to Kubernetes for apartment door access control system serving 10,000+ units.",
+      "highlights": [
+        "Implemented comprehensive CI/CD pipeline from scratch using Jenkins and GitLab CI, reducing deployment time by 75% and eliminating manual deployment errors.",
+        "Executed critical Python 2 to Python 3 migration across entire codebase (50+ services), ensuring continued security support and improved performance by 30%."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "ChartMogul Ltd",
+      "position": "Senior DevOps Engineer",
+      "startDate": "2015",
+      "endDate": "2016",
+      "summary": "Championed DevOps methodologies and automation across engineering department.",
+      "highlights": [
+        "Championed DevOps methodologies and automation across engineering department, fostering an agile culture that measurably accelerated release cadence and reduced manual toil.",
+        "Managed a diverse environment including early-adoption Kubernetes, Docker, and traditional VMs."
+      ]
+    },
+    {
+      "name": "Performance Horizon Group",
+      "position": "Systems Administrator",
+      "startDate": "2015",
+      "endDate": "2015",
+      "summary": "Established formal change and release management process.",
+      "highlights": [
+        "Established a formal change and release management process from ground up, implementing automated deployments to improve reliability and velocity.",
+        "Architected and deployed a highly available IDS/IPS/NSM solution to enhance platform security."
+      ],
+      "location": "Newcastle upon Tyne, UK"
+    },
+    {
+      "name": "Odobo Limited",
+      "position": "DevOps Engineer & R&D",
+      "startDate": "2013",
+      "endDate": "2014",
+      "summary": "Architected and implemented a continuous delivery platform.",
+      "highlights": [
+        "Architected and implemented a continuous delivery platform integrating JIRA and Bitbucket, automating the full software delivery lifecycle.",
+        "Led successful consolidation of multiple configuration management tools into a single, unified Salt-based platform, improving consistency and reducing complexity."
+      ],
+      "location": "Gibraltar"
+    },
+    {
+      "name": "William Hill Online",
+      "position": "System Engineer",
+      "startDate": "2012",
+      "endDate": "2013",
+      "summary": "Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.",
+      "highlights": [
+        "Engineered novel deployment techniques that reduced application downtime and streamlined release process."
+      ],
+      "location": "Gibraltar"
+    },
+    {
+      "name": "ticki.sh",
+      "position": "Freelance Consultant",
+      "startDate": "2011",
+      "endDate": "2012",
+      "summary": "Freelance consulting services.",
+      "highlights": [],
+      "location": "Newcastle upon Tyne, UK"
+    },
+    {
+      "name": "The Amazing Group",
+      "position": "Lead Architect",
+      "startDate": "2007",
+      "endDate": "2011",
+      "summary": "Lead architectural responsibilities.",
+      "highlights": [],
+      "location": "Gateshead, UK"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Linux Community",
+      "area": "Technical Foundation",
+      "studyType": "Self-Directed Learning",
+      "startDate": "1994",
+      "endDate": "Present",
+      "score": "",
+      "courses": [
+        "Linux user since 1994, Advanced Systems Programming expertise throughout career"
+      ]
+    },
+    {
+      "institution": "Professional Development",
+      "area": "Continuous Learning",
+      "studyType": "Self-Directed Learning",
+      "startDate": "1994",
+      "endDate": "Present",
+      "score": "",
+      "courses": [
+        "30+ years continuous professional development in emerging technologies"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "NHS Approved Supplier",
+      "date": "2007",
+      "awarder": "UK National Health Service",
+      "summary": "Achieved approved supplier status for UK National Health Service (NHS) and secured contracts for UK government and defence clients."
+    },
+    {
+      "title": "Newcastle College Technical Instructor",
+      "date": "2001",
+      "awarder": "Newcastle College",
+      "summary": "Recognized as subject matter expert and served as technical instructor at Newcastle College, teaching advanced courses on ActionScript, Lingo, PHP."
+    },
+    {
+      "title": "Community Engagement Recognition",
+      "date": "2017",
+      "awarder": "Tech Community",
+      "summary": "Active member of Berlin tech community (c-base hackerspace) and wider cloud-native ecosystem. Attended multiple KubeCons (Europe) and Nix Conf."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Kubernetes Expertise",
+      "date": "2014",
+      "issuer": "Hands-on Experience"
+    },
+    {
+      "name": "Cloud Architecture",
+      "date": "2016",
+      "issuer": "Hands-on Experience"
+    },
+    {
+      "name": "Platform Engineering",
+      "date": "2017",
+      "issuer": "Hands-on Experience"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Site Reliability Engineering",
+      "level": "Expert",
+      "keywords": [
+        "SLO/SLI Design",
+        "Error Budget Management", 
+        "Chaos Engineering",
+        "MTTR Reduction",
+        "Incident Response",
+        "Blameless Post-Mortems",
+        "Toil Automation"
+      ]
+    },
+    {
+      "name": "Cloud & Containerization",
+      "level": "Expert",
+      "keywords": [
+        "CRI",
+        "Podman",
+        "Docker",
+        "LXC",
+        "AWS",
+	"GCP"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "level": "Expert", 
+      "keywords": [
+        "Crossplane",
+        "Terraform",
+        "Salt",
+        "Ansible",
+        "Puppet",
+        "Helm",
+	"Nix"
+      ]
+    },
+    {
+      "name": "CI/CD & GitOps",
+      "level": "Expert",
+      "keywords": [
+        "GitHub Actions",
+        "GitLab CI", 
+        "ArgoCD",
+        "Flux",
+        "Pipeline Automation"
+      ]
+    },
+    {
+      "name": "Observability & Monitoring",
+      "level": "Expert",
+      "keywords": [
+        "Grafana LGTM Stack",
+        "Prometheus",
+        "Nagios",
+	"ELK Stack"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "Expert",
+      "keywords": [
+        "Go",
+        "Python", 
+        "Rust",
+        "Bash",
+        "C/C++",
+        "Perl",
+        "Ruby",
+        "Erlang"
+      ]
+    },
+    {
+      "name": "Security & Compliance",
+      "level": "Expert",
+      "keywords": [
+        "Software Supply Chain (SBOMs, Attestations)",
+        "IDS/IPS",
+        "PCI-DSS",
+        "Zero Trust"
+      ]
+    },
+    {
+      "name": "Platform Engineering",
+      "level": "Expert",
+      "keywords": [
+        "Internal Developer Platforms (IDP)",
+        "Developer Experience (DevEx)",
+        "Service Mesh",
+        "Istio",
+	"Custom Operators"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Engram",
+      "description": "Distributed persistent memory system for AI agents. Provides cross-session context, task tracking, reasoning chains, and knowledge graphs for autonomous agent workflows. Designed to solve the fundamental statelessness problem in LLM-based development pipelines.",
+      "highlights": [
+        "Architected a graph-based memory model enabling agents to store and traverse context, reasoning, and decisions across sessions",
+        "Built CLI tooling and integrations for Claude and OpenCode, enabling AI-native development workflows at scale",
+        "Adopted internally to coordinate multi-agent pipelines across all personal and consulting projects"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/vincents-ai/engram",
+      "roles": ["Architect", "Lead Developer"],
+      "entity": "vincents-ai",
+      "type": "application"
+    },
+    {
+      "name": "Skylet",
+      "description": "Secure, extensible WASM-based plugin runtime for autonomous agents and microservices. Provides sandboxed plugin execution with capability-based security, FFI support, and a lifecycle management model suitable for multi-tenant agent deployments.",
+      "highlights": [
+        "Designed a capability-based security model enforcing least-privilege execution for untrusted WASM plugins",
+        "Implemented FFI bridge enabling safe interoperability between host runtime and plugin workloads",
+        "Companion to the Engram memory system, enabling extensible agent tooling without compromising host security"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/vincents-ai/skylet",
+      "roles": ["Architect", "Lead Developer"],
+      "entity": "vincents-ai",
+      "type": "application"
+    },
+    {
+      "name": "domain_exporter",
+      "description": "Production-grade Prometheus exporter for WHOIS domain metadata. Exposes domain expiry, registrar, and status information as Prometheus metrics, enabling alerting and dashboarding for domain fleet management.",
+      "highlights": [
+        "98+ GitHub stars — one of the most widely adopted domain monitoring tools in the Prometheus ecosystem",
+        "Used in production across hundreds of organisations for domain expiry alerting and SRE runbooks",
+        "Written in Go with full Prometheus exposition format compliance and configurable WHOIS provider support"
+      ],
+      "startDate": "2017",
+      "endDate": "Present",
+      "url": "https://github.com/shift/domain_exporter",
+      "roles": ["Author", "Maintainer"],
+      "entity": "shift",
+      "type": "application"
+    },
+    {
+      "name": "aethalloc",
+      "description": "Experimental Rust memory hypervisor implementing asynchronous metadata offloading, hardware-enforced spatial safety via guard pages, and virtual memory page compaction. Targets high-performance systems where allocator behaviour directly impacts latency and throughput.",
+      "highlights": [
+        "Implemented lock-free allocation paths using Rust atomics and custom arena management for low-contention throughput",
+        "Hardware-enforced spatial safety using guard page placement to catch out-of-bounds access at the allocator level",
+        "Asynchronous metadata offloading decouples bookkeeping from the hot allocation path, reducing P99 latency"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/aethalloc",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "library"
+    },
+    {
+      "name": "nixernetes",
+      "description": "Enterprise Nix-driven Kubernetes manifest framework with declarative compliance enforcement and zero-trust security defaults. Generates auditable, reproducible K8s manifests from typed Nix expressions, eliminating YAML drift and enabling policy-as-code at the manifest layer.",
+      "highlights": [
+        "Declarative compliance enforcement baked into manifest generation — policies are code, not post-hoc checks",
+        "Zero-trust security defaults applied automatically: network policies, pod security standards, and RBAC least-privilege",
+        "12+ GitHub stars; used as a reference implementation for Nix-native Kubernetes platform engineering"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/nixernetes",
+      "roles": ["Author", "Maintainer"],
+      "entity": "shift",
+      "type": "framework"
+    },
+    {
+      "name": "vulnz",
+      "description": "Go vulnerability data aggregator built to address EU NIS2 and Cyber Resilience Act (CRA) compliance requirements. Aggregates 28 vulnerability and advisory providers including EU-specific feeds (EUVD, BSI CERT-Bund, CERT-FR, ENISA) alongside global sources (NVD, KEV, OVAL, CSAF), enabling organisations to meet mandatory vulnerability management obligations under EU regulation.",
+      "highlights": [
+        "Aggregates EU-mandated sources — EUVD, BSI CERT-Bund, CERT-FR, ENISA CSAF — required under NIS2 and the EU Cyber Resilience Act",
+        "28-provider coverage including NVD, CISA KEV, EPSS scoring, SBOM integration, and supply chain security feeds",
+        "Designed to fill the compliance gap for EU-based organisations lacking a single tool covering both ENISA and global CVE intelligence"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/vulnz",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "application"
+    },
+    {
+      "name": "sun50iw12p1 Linux Research",
+      "description": "Mainline Linux kernel porting and hardware enablement research for the Allwinner H713 (sun50iw12p1) SoC — the chip powering the HY300 Android projector. Reverse engineered device tree, U-Boot support, and driver integration to bring mainline kernel support to unsupported consumer hardware.",
+      "highlights": [
+        "27+ GitHub stars — primary public reference for H713 mainline Linux enablement",
+        "Reverse engineered clock, pinctrl, and display subsystems from downstream vendor kernel to produce upstream-compatible device tree",
+        "Research directly enabling community mainline kernel support for a widely-available but previously unsupported SoC"
+      ],
+      "startDate": "2025",
+      "endDate": "Present",
+      "url": "https://github.com/shift/sun50iw12p1-research",
+      "roles": ["Researcher", "Lead Developer"],
+      "entity": "shift",
+      "type": "research"
+    },
+    {
+      "name": "nixos-gateway",
+      "description": "Modular, data-driven NixOS framework for building declarative routers, firewalls, and network infrastructure. Covers DHCP, DNS, WireGuard VPN, firewall policy, and routing — all expressed as composable Nix modules with reproducible, auditable outputs.",
+      "highlights": [
+        "Fully declarative network stack: WireGuard, nftables firewall, DNS-over-TLS, DHCP — all as composable NixOS modules",
+        "Reproducible builds mean infrastructure state is always recoverable and auditable from source",
+        "Designed as a practical alternative to proprietary router firmware for homelab and small enterprise network management"
+      ],
+      "startDate": "2025",
+      "endDate": "Present",
+      "url": "https://github.com/shift/nixos-gateway",
+      "roles": ["Author", "Maintainer"],
+      "entity": "shift",
+      "type": "framework"
+    },
+    {
+      "name": "DOTS Family Mode",
+      "description": "Comprehensive parental control system for Linux with advanced eBPF-based monitoring. Provides time management, application blocking, content filtering, and encrypted local storage — built entirely on mainline Linux kernel primitives without requiring cloud connectivity or third-party agents.",
+      "highlights": [
+        "eBPF collectors for deep kernel-level visibility into process, network, and filesystem activity without kernel module patching",
+        "Written in Rust with a Nix-driven build system; Gherkin BDD test suite for behaviour validation",
+        "Fully offline — all policy enforcement and storage is local, with no dependency on external services"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/dots-distro/dots-family-mode",
+      "roles": ["Architect", "Lead Developer"],
+      "entity": "dots-distro",
+      "type": "application"
+    },
+    {
+      "name": "DOTS — Device Orchestration, Totally Simplified",
+      "description": "NixOS-based declarative device orchestration framework targeting desktops and embedded Linux systems. Provides a reproducible, composable foundation for managing Linux device fleets — from single-user desktops to multi-device home and small office environments.",
+      "highlights": [
+        "Declarative device configuration with Nix flakes — full system state reproducible from a single source of truth",
+        "Modular architecture supporting desktop, server, and embedded targets from a shared NixOS module library",
+        "Parent project to dots-family-mode and dots-wallpaper, demonstrating a composable NixOS application platform"
+      ],
+      "startDate": "2025",
+      "endDate": "Present",
+      "url": "https://github.com/shift/dots",
+      "roles": ["Author", "Maintainer"],
+      "entity": "shift",
+      "type": "framework"
+    },
+    {
+      "name": "Adaptive Multimedia Platform",
+      "description": "AI-powered multimedia processing platform with 14 intelligence features including Whisper (speech-to-text), YOLOv8 (object detection), Tesseract OCR, and OpenCV pipeline integration. Written in Rust with dual AGPLv3/Commercial licensing.",
+      "highlights": [
+        "14 AI intelligence features unified in a single Rust processing pipeline",
+        "Integrates Whisper, YOLOv8, Tesseract, and OpenCV as composable processing stages",
+        "Dual-licensed AGPLv3/Commercial — designed for both open community use and enterprise deployment"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/adaptive-multimedia-platform",
+      "roles": ["Architect", "Lead Developer"],
+      "entity": "shift",
+      "type": "application"
+    },
+    {
+      "name": "nix-helm-generator",
+      "description": "Generate production-grade Helm charts from Nix expressions. Bridges the Nix ecosystem and Kubernetes tooling, enabling teams already using NixOS or Nix-based CI to generate auditable, reproducible Helm charts without maintaining YAML by hand.",
+      "highlights": [
+        "Generates Helm charts from typed Nix expressions — eliminates YAML authoring and templating errors",
+        "Production-grade output with values schema generation, chart testing, and CI integration",
+        "Companion tooling to nixernetes for teams using Nix-native Kubernetes platform workflows"
+      ],
+      "startDate": "2025",
+      "endDate": "Present",
+      "url": "https://github.com/shift/nix-helm-generator",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "library"
+    },
+    {
+      "name": "D-Stack Notes",
+      "description": "In-depth analysis of Germany's Deutschland Stack (D-Stack) sovereign technology reference architecture. Gap analysis against CNCF tooling, BSI compliance requirements, NIS2 obligations, and open-source alternatives — documenting the practical path to digital sovereignty for German public sector and enterprise.",
+      "highlights": [
+        "Comprehensive gap analysis between D-Stack reference architecture and current CNCF/open-source ecosystem",
+        "Maps BSI TR and NIS2 compliance requirements to concrete tooling decisions",
+        "Public reference for German public sector, enterprise architects, and EU digital sovereignty practitioners"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/d-stack-notes",
+      "roles": ["Author", "Researcher"],
+      "entity": "shift",
+      "type": "research"
+    },
+    {
+      "name": "web-spec",
+      "description": "Production-ready Gherkin Feature Runner written in Rust with enterprise CI/CD integration, performance monitoring, and multi-channel notification support. Enables BDD acceptance testing as a first-class pipeline stage.",
+      "highlights": [
+        "Full Gherkin feature file parsing and step execution in Rust — no JVM or interpreter dependency",
+        "Enterprise CI/CD integration with structured reporting, performance monitoring, and multi-channel alerting",
+        "Used as the BDD test layer in dots-family-mode and other personal projects"
+      ],
+      "startDate": "2026",
+      "endDate": "Present",
+      "url": "https://github.com/shift/web-spec",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "application"
+    },
+    {
+      "name": "garnix-insights",
+      "description": "CI/CD insights and observability tool for Garnix.io, the Nix-native continuous build platform. Provides CLI, server, and MCP (Model Context Protocol) interfaces for querying build history, cache hit rates, and failure analysis.",
+      "highlights": [
+        "MCP server interface enables AI agents to query CI/CD state directly — a practical example of LLM-native tooling",
+        "CLI and server modes for human and programmatic access to Garnix build telemetry",
+        "Fills the observability gap in Nix-based CI pipelines for teams using Garnix as their build infrastructure"
+      ],
+      "startDate": "2025",
+      "endDate": "Present",
+      "url": "https://github.com/shift/garnix-insights",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "application"
+    },
+    {
+      "name": "systemd-status-leds",
+      "description": "Go service that subscribes to systemd D-Bus events for defined units and reports their status on a WS281x RGBW LED strip over SPI. Mainline kernel driver — no proprietary libraries required.",
+      "highlights": [
+        "Real-time systemd unit health visualised on physical WS281x RGBW LED hardware via spidev",
+        "Pure D-Bus event subscription model — zero polling, minimal resource footprint",
+        "Demonstrates practical embedded Linux systems integration: D-Bus, SPI, mainline kernel driver stack"
+      ],
+      "startDate": "2022",
+      "endDate": "Present",
+      "url": "https://github.com/shift/systemd-status-leds",
+      "roles": ["Author"],
+      "entity": "shift",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "1.0.0",
+    "lastModified": "2026-04-03T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Vincent Palmer",
+    "label": "Staff Site Reliability Engineer & Platform Engineering Leader",
+    "image": "",
+    "email": "shift@someone.section.me",
+    "phone": "+49 173 2445094",
+    "url": "https://github.com/shift",
+    "summary": "Staff SRE & Platform Engineering leader with 30+ years experience scaling infrastructure from startups to Fortune 500 environments. Specialize in Kubernetes, distributed systems, and enterprise platform engineering with track record of successful architecture implementation.",
+    "location": {
+      "address": "Berlin, Germany",
+      "postalCode": "10115",
+      "city": "Berlin",
+      "countryCode": "DE",
+      "region": "Berlin"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "shift",
+        "url": "https://github.com/shift"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Independent Consultant & Architect",
+      "position": "Independent Consultant & Architect",
+      "url": "",
+      "startDate": "2024",
+      "endDate": "Present",
+      "summary": "Advised early-stage AI/Fintech startup on technical architecture, cloud infrastructure, and security practices under strict NDA.",
+      "highlights": [
+        "Provided strategic technical consulting to early-stage AI/Fintech startup, advising on foundational architecture, cloud infrastructure, and security practices under strict NDA.",
+        "Researched and developed multiple advanced systems as personal projects, including a multi-RAFT distributed key-value store, an ML-powered HTTP/3 WAF, and an AI-native development platform."
+      ],
+      "location": "Berlin, Germany"
+    },
+    {
+      "name": "MedTech Startup",
+      "position": "Chief Architect",
+      "url": "",
+      "startDate": "2023",
+      "endDate": "2024",
+      "summary": "Architected and led end-to-end implementation of greenfield prescription delivery platform, serving 10,000+ daily users with 99.95% uptime.",
+      "highlights": [
+        "Led cross-functional team of 8 engineers through complete platform lifecycle from concept to production deployment.",
+        "Directed architectural strategy for HIPAA-compliant prescription management, achieving regulatory approval in 6 months.",
+        "Spearheaded French market expansion, implementing local compliance requirements and achieving 20% market penetration in first year."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "Feedzai SA",
+      "position": "Principal Kubernetes Engineer",
+      "url": "",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s.",
+      "highlights": [
+        "Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s, achieving 99.9% availability and reducing infrastructure costs by 35%.",
+        "Pioneered Crossplane implementation for unified Infrastructure as Code platform, enabling seamless multi-cloud deployments across AWS, GCP, and on-premise with 40% reduction in provisioning time.",
+        "Transformed CI/CD and security paradigms, implementing software supply chain security (Attestations/SBOMs) and next-generation internal developer platform, reducing deployment time by 60%.",
+        "Established SRE practices including SLI/SLO design, error budget management, and automated incident response, reducing MTTR from 2 hours to 15 minutes."
+      ],
+      "location": "Coimbra"
+    },
+    {
+      "name": "Booming Games Ltd",
+      "position": "Head of Systems & Infrastructure",
+      "url": "",
+      "startDate": "2017",
+      "endDate": "2022",
+      "summary": "Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.",
+      "highlights": [
+        "Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.",
+        "Engineered hybrid infrastructure spanning 5+ bare-metal datacenters and public clouds (AWS, GKE), implementing bare-metal Kubernetes clusters achieving 50% cost savings compared to managed cloud services.",
+        "Established comprehensive observability framework with Prometheus, Grafana, and ELK Stack, providing real-time insights into system performance and reducing incident detection time by 80%.",
+        "Implemented chaos engineering practices and automated failure recovery systems, improving system resilience and reducing unplanned downtime by 90%."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "KIWI.KI GmbH",
+      "position": "Cloud Architect",
+      "url": "",
+      "startDate": "2016",
+      "endDate": "2017",
+      "summary": "Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture.",
+      "highlights": [
+        "Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture, achieving zero-downtime migration for apartment door access control system serving 10,000+ units.",
+        "Implemented comprehensive CI/CD pipeline from scratch using Jenkins and GitLab CI, reducing deployment time by 75% and eliminating manual deployment errors.",
+        "Executed critical Python 2 to Python 3 migration across entire codebase (50+ services), ensuring continued security support and improved performance by 30%."
+      ],
+      "location": "Berlin"
+    },
+    {
+      "name": "ChartMogul Ltd",
+      "position": "Senior DevOps Engineer",
+      "url": "",
+      "startDate": "2015",
+      "endDate": "2016",
+      "summary": "Championed DevOps methodologies and automation across engineering department.",
+      "highlights": [
+        "Championed DevOps methodologies and automation across engineering department, fostering an agile culture that significantly accelerated development and deployment cycles.",
+        "Managed a diverse environment including early-adoption Kubernetes, Docker, and traditional VMs."
+      ]
+    },
+    {
+      "name": "Performance Horizon Group",
+      "position": "Systems Administrator",
+      "url": "",
+      "startDate": "2015",
+      "endDate": "2015",
+      "summary": "Established formal change and release management process.",
+      "highlights": [
+        "Established a formal change and release management process from ground up, implementing automated deployments to improve reliability and velocity.",
+        "Architected and deployed a highly available IDS/IPS/NSM solution to enhance platform security."
+      ],
+      "location": "Newcastle upon Tyne, UK"
+    },
+    {
+      "name": "Odobo Limited",
+      "position": "DevOps Engineer & R&D",
+      "url": "",
+      "startDate": "2013",
+      "endDate": "2014",
+      "summary": "Architected and implemented a continuous delivery platform.",
+      "highlights": [
+        "Architected and implemented a continuous delivery platform integrating JIRA and Bitbucket, automating the full software delivery lifecycle.",
+        "Led successful consolidation of multiple configuration management tools into a single, unified Salt-based platform, improving consistency and reducing complexity."
+      ],
+      "location": "Gibraltar"
+    },
+    {
+      "name": "William Hill Online",
+      "position": "System Engineer",
+      "url": "",
+      "startDate": "2012",
+      "endDate": "2013",
+      "summary": "Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.",
+      "highlights": [
+        "Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.",
+        "Engineered novel deployment techniques that reduced application downtime and streamlined release process."
+      ],
+      "location": "Gibraltar"
+    },
+    {
+      "name": "ticki.sh",
+      "position": "Freelance Consultant",
+      "url": "",
+      "startDate": "2011",
+      "endDate": "2012",
+      "summary": "Freelance consulting services.",
+      "highlights": [],
+      "location": "Newcastle upon Tyne, UK"
+    },
+    {
+      "name": "The Amazing Group",
+      "position": "Lead Architect",
+      "url": "",
+      "startDate": "2007",
+      "endDate": "2011",
+      "summary": "Lead architectural responsibilities.",
+      "highlights": [],
+      "location": "Gateshead, UK"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Linux Community",
+      "area": "Technical Foundation",
+      "studyType": "Self-Directed Learning",
+      "startDate": "1994",
+      "endDate": "Present",
+      "score": "",
+      "courses": [
+        "Linux user since 1994, Advanced Systems Programming expertise throughout career"
+      ]
+    },
+    {
+      "institution": "Professional Development",
+      "area": "Continuous Learning",
+      "studyType": "Self-Directed Learning",
+      "startDate": "1994",
+      "endDate": "Present",
+      "score": "",
+      "courses": [
+        "30+ years continuous professional development in emerging technologies"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "NHS Approved Supplier",
+      "date": "2000-2007",
+      "awarder": "UK National Health Service",
+      "summary": "Achieved approved supplier status for UK National Health Service (NHS) and secured contracts for UK government and defence clients."
+    },
+    {
+      "title": "Newcastle College Technical Instructor",
+      "date": "2000-2001",
+      "awarder": "Newcastle College",
+      "summary": "Recognized as subject matter expert and served as technical instructor at Newcastle College, teaching advanced courses on ActionScript, Lingo, PHP."
+    },
+    {
+      "title": "Community Engagement Recognition",
+      "date": "2017-Present",
+      "awarder": "Tech Community",
+      "summary": "Active member of Berlin tech community (c-base hackerspace) and wider cloud-native ecosystem. Attended multiple KubeCons (Europe) and Nix Conf."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Kubernetes Expertise",
+      "date": "2014-Present",
+      "issuer": "Hands-on Experience",
+      "url": ""
+    },
+    {
+      "name": "Cloud Architecture",
+      "date": "2016-Present", 
+      "issuer": "Hands-on Experience",
+      "url": ""
+    },
+    {
+      "name": "Platform Engineering",
+      "date": "2017-Present",
+      "issuer": "Hands-on Experience", 
+      "url": ""
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Site Reliability Engineering",
+      "level": "Expert",
+      "keywords": [
+        "SLO/SLI Design",
+        "Error Budget Management", 
+        "Chaos Engineering",
+        "MTTR Reduction",
+        "Incident Response",
+        "Blameless Post-Mortems",
+        "Toil Automation"
+      ]
+    },
+    {
+      "name": "Cloud & Containerization",
+      "level": "Expert",
+      "keywords": [
+        "CRI",
+        "Podman",
+        "Docker",
+        "LXC",
+        "AWS",
+	"GCP"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "level": "Expert", 
+      "keywords": [
+        "Crossplane",
+        "Terraform",
+        "Salt",
+        "Ansible",
+        "Puppet",
+        "Helm",
+	"Nix"
+      ]
+    },
+    {
+      "name": "CI/CD & GitOps",
+      "level": "Expert",
+      "keywords": [
+        "GitHub Actions",
+        "GitLab CI", 
+        "ArgoCD",
+        "Flux",
+        "Pipeline Automation"
+      ]
+    },
+    {
+      "name": "Observability & Monitoring",
+      "level": "Expert",
+      "keywords": [
+        "Grafana LGTM stack",
+        "Prometheus",
+        "Nagios",
+	"ELK"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "Expert",
+      "keywords": [
+        "Go",
+        "Python", 
+        "Rust",
+        "Bash",
+        "C/C++",
+        "Perl",
+        "Ruby",
+        "Erlang"
+      ]
+    },
+    {
+      "name": "Security & Compliance",
+      "level": "Expert",
+      "keywords": [
+        "Software Supply Chain (SBOMs, Attestations)",
+        "IDS/IPS",
+        "PCI-DSS",
+        "Zero Trust"
+      ]
+    },
+    {
+      "name": "Platform Engineering",
+      "level": "Expert",
+      "keywords": [
+        "Internal Developer Platforms (IDP)",
+        "Developer Experience (DevEx)",
+        "Service Mesh",
+        "Istio",
+	"Custom Operators"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Remote Gaming Server Platform",
+      "description": "Architected a production-grade, regulatory-aware RGS platform in Rust. The project's complexity and scale revealed critical gaps in existing tooling for AI development, security, and global deployment, leading to the creation of the following purpose-built solutions.",
+      "highlights": [
+        "Production-grade regulatory-aware platform architecture",
+        "Revealed critical gaps in AI development tooling"
+      ],
+      "startDate": "2024",
+      "endDate": "Present",
+      "url": "",
+      "roles": [
+        "Architect",
+        "Lead Developer"
+      ],
+      "entity": "",
+      "type": "application"
+    },
+    {
+      "name": "AI-Native Development Platform", 
+      "description": "To overcome AI context limitations discovered during RGS development, engineered a novel platform featuring a semantic code server (MCP) and workflow management, enabling effective AI-assisted development on large-scale codebases.",
+      "highlights": [
+        "Semantic code server (MCP) integration",
+        "Workflow management for AI-assisted development",
+        "Large-scale codebase optimization"
+      ],
+      "startDate": "2024",
+      "endDate": "Present",
+      "url": "",
+      "roles": [
+        "Architect",
+        "Lead Developer"
+      ],
+      "entity": "",
+      "type": "platform"
+    },
+    {
+      "name": "AI-Assisted Hardware Reverse Engineering",
+      "description": "The AI-native development platform is now being actively applied to accelerate reverse engineering of Allwinner sun50iw12p1 SoC, with public repository serving as a real-world demonstration of its capabilities.",
+      "highlights": [
+        "Active application to Allwinner sun50iw12p1 SoC reverse engineering",
+        "Public demonstration of AI-native platform capabilities"
+      ],
+      "startDate": "2024",
+      "endDate": "Present",
+      "url": "",
+      "roles": [
+        "Lead Developer"
+      ],
+      "entity": "",
+      "type": "research"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "1.0.0",
+    "lastModified": "2025-01-19T13:30:39.000Z"
+  }
+}

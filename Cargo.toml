@@ -1,0 +1,49 @@
+[package]
+name = "jsonresume-builder"
+version = "0.1.0"
+edition = "2021"
+description = "JSON Resume to LaTeX/HTML generator with ModernCV support"
+authors = ["Vincent Palmer <shift@someone.section.me>"]
+license = "MIT"
+
+[dependencies]
+# JSON Resume schema and processing
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Template engine
+tera = "1.19"
+
+# CLI and utilities
+clap = { version = "4.4", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# File I/O and utilities
+regex = "1.10"
+
+# Date handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# LaTeX compilation (if needed)
+tempfile = "3.8"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[dev-dependencies]
+# Testing
+pretty_assertions = "1.4"
+proptest = "1"
+insta = { version = "1", features = ["json"] }
+assert_cmd = "2"
+predicates = "3"
+
+[lib]
+name = "jsonresume_builder"
+path = "src/lib.rs"
+
+[[bin]]
+name = "resume-builder"
+path = "src/main.rs"

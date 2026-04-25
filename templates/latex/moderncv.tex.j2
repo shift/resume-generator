@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.82]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\microtypesetup{expansion=false}
+\setlength{\parskip}{0.65em}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{left=0pt, label=\textbullet, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt}
+
+% Personal information
+\name{}{ }
+\address{ {% if resume.basics.location %}{% if resume.basics.location.address %}{{ resume.basics.location.address | escape_latex }}{% elif resume.basics.location.city %}{{ resume.basics.location.city | escape_latex }}{% if resume.basics.location.countryCode %}, {{ resume.basics.location.countryCode }}{% endif %}{% endif %}{% endif %} }
+\phone{ {% if resume.basics.phone %}{{ resume.basics.phone }}{% endif %} }
+\email{ {% if resume.basics.email %}{{ resume.basics.email }}{% endif %} }
+{% for profile in resume.basics.profiles %}
+{% if profile.network == "GitHub" or profile.network == "github" %}\social[github]{ {{ profile.username }} }{% elif profile.network == "LinkedIn" or profile.network == "linkedin" %}\social[linkedin]{ {{ profile.username }} }{% elif profile.network == "Twitter" or profile.network == "twitter" %}\social[twitter]{ {{ profile.username }} }{% else %}\cvitem{ {{ profile.network | escape_latex }} }{ {% if profile.url %}{{ profile.url }}{% else %}{{ profile.username }}{% endif %} }{% endif %}
+{% endfor %}
+
+\begin{document}
+\makecvtitle
+
+% Centered custom header
+\begin{center}
+{\Huge\bfseries {{ resume.basics.name | escape_latex }} }\\[6pt]
+{% if resume.basics.label_line1 %}
+{\large\itshape {{ resume.basics.label_line1 | escape_latex }}{% if resume.basics.label_line2 %} \\
+{{ resume.basics.label_line2 | escape_latex }}{% endif %}}\\[6pt]
+{% elif resume.basics.label %}
+{\large\itshape {{ resume.basics.label | escape_latex }}}\\[6pt]
+{% endif %}
+{\small
+{% if resume.basics.email %}\href{mailto:{{ resume.basics.email }}}{{ resume.basics.email }}{% endif %}
+{% if resume.basics.phone %} \;·\; {{ resume.basics.phone }}{% endif %}
+{% for profile in resume.basics.profiles %}{% if profile.network == 'GitHub' %} \;·\; GitHub: {{ profile.username }}{% endif %}{% endfor %}
+}
+\end{center}
+
+{% if resume.basics.summary %}
+\section{Summary}
+{{ resume.basics.summary | escape_latex }}
+{% endif %}
+
+{% if resume.work %}
+\section{Work Experience}
+{% for job in resume.work %}
+\cventry{ {{- job.startDate -}} }{ {{- job.position | escape_latex -}} }{ {{- job.name | escape_latex -}} }{ {% if job.location %}{{ job.location | escape_latex }}{% endif %} }{ {% if job.endDate %}{{ job.endDate }}{% else %}Present{% endif %} }{ {% if job.summary %}{{ job.summary | escape_latex }}{% endif %} }
+{% if job.highlights %}
+\begin{itemize}
+{% for highlight in job.highlights %}
+  \item {{ highlight | escape_latex }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+{% if job.url %}\cvitem{URL}{\href{ {{ job.url }} }{ {{ job.url }} }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if resume.education %}
+\section{Education}
+{% for edu in resume.education %}
+\cventry{ {{- edu.startDate -}} }{ {%- if edu.studyType %}{{ edu.studyType | escape_latex }}{% endif -%} }{ {{- edu.institution | escape_latex -}} }{ {% if edu.location %}{{ edu.location | escape_latex }}{% endif %} }{ {% if edu.endDate %}{{ edu.endDate }}{% else %}Present{% endif %} }{ {% if edu.courses %}{{ edu.courses | join(sep=", ") | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+{% if resume.skills %}
+\section{Skills}
+{% for skill in resume.skills %}
+\textbf{ {{ skill.name | escape_latex }}: } {% if skill.keywords %}{{ skill.keywords | join(sep=", ") | escape_latex }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% set has_products = false %}
+{% for _project in resume.projects %}{% if _project.type == 'product' %}{% set has_products = true %}{% break %}{% endif %}{% endfor %}
+{% if has_products %}
+\section{Products}
+{% for project in resume.projects %}{% if project.type == 'product' %}
+\cventry{ {{- project.startDate -}} }{ {{- project.name | escape_latex -}} }{ {% if project.entity %}{{ project.entity | escape_latex }}{% endif %} }{ {% if project.type %}{{ project.type | escape_latex }}{% endif %} }{ {% if project.endDate %}{{ project.endDate }}{% else %}Present{% endif %} }{ {% if project.highlights %}{{ project.highlights | first | escape_latex }}{% elif project.description %}{{ project.description | escape_latex }}{% endif %} }
+{% if project.url %}\cvitem{URL}{\href{ {{ project.url }} }{ {{ project.url }} }}{% endif %}
+{% endif %}{% endfor %}
+{% endif %}
+
+{% if resume.projects %}
+\section{Open Source Projects}
+{% for project in resume.projects %}
+\cventry{ {{- project.startDate -}} }{ {{- project.name | escape_latex -}} }{ {% if project.entity %}{{ project.entity | escape_latex }}{% endif %} }{ {% if project.type %}{{ project.type | escape_latex }}{% endif %} }{ {% if project.endDate %}{{ project.endDate }}{% else %}Present{% endif %} }{ {% if project.highlights %}{{ project.highlights | first | escape_latex }}{% elif project.description %}{{ project.description | escape_latex }}{% endif %} }
+{% if project.url %}\cvitem{URL}{\href{ {{ project.url }} }{ {{ project.url }} }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if resume.volunteer %}
+\section{Volunteer Experience}
+{% for vol in resume.volunteer %}
+\cventry{ {{- vol.startDate -}} }{ {{- vol.position | escape_latex -}} }{ {{- vol.organization | escape_latex -}} }{ }{ {% if vol.endDate %}{{ vol.endDate }}{% else %}Present{% endif %} }{ {% if vol.summary %}{{ vol.summary | escape_latex }}{% endif %} }
+{% if vol.highlights %}
+\begin{itemize}
+{% for highlight in vol.highlights %}
+  \item {{ highlight | escape_latex }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if resume.awards %}
+\section{Awards}
+{% for award in resume.awards %}
+\cvitem{ {% if award.date %}{{ award.date }}{% endif %} }{ \textbf{ {{ award.title | escape_latex }} }{% if award.awarder %} -- {{ award.awarder | escape_latex }}{% endif %}{% if award.summary %}. {{ award.summary | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+{% if resume.certificates %}
+\section{Certifications}
+{% for cert in resume.certificates %}
+\cvitem{ {% if cert.date %}{{ cert.date }}{% endif %} }{ \textbf{ {{ cert.name | escape_latex }} }{% if cert.issuer %} -- {{ cert.issuer | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+{% if resume.publications %}
+\section{Publications}
+{% for pub in resume.publications %}
+\cvitem{ {% if pub.releaseDate %}{{ pub.releaseDate }}{% endif %} }{ \textbf{ {{ pub.name | escape_latex }} }{% if pub.publisher %} -- {{ pub.publisher | escape_latex }}{% endif %}{% if pub.summary %}. {{ pub.summary | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+{% if resume.languages %}
+\section{Languages}
+{% for lang in resume.languages %}
+\cvitem{ {{ lang.language | escape_latex }} }{ {{ lang.fluency | escape_latex }} }
+{% endfor %}
+{% endif %}
+
+{% if resume.interests %}
+\section{Interests}
+{% for interest in resume.interests %}
+\cvitem{ {{ interest.name | escape_latex }} }{ {% if interest.keywords %}{{ interest.keywords | join(sep=", ") | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+{% if resume.references %}
+\section{References}
+{% for ref in resume.references %}
+\cvitem{ {{ ref.name | escape_latex }} }{ {% if ref.reference %}{{ ref.reference | escape_latex }}{% endif %} }
+{% endfor %}
+{% endif %}
+
+\end{document}

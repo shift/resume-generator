@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Palmer - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #2c3e50; padding-bottom: 20px; }
+        .name { font-size: 2.5em; font-weight: 300; color: #2c3e50; margin-bottom: 5px; }
+        .contact { font-size: 0.9em; color: #7f8c8d; margin: 5px 0; }
+        .contact a { color: #3498db; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 1.3em; font-weight: 600; color: #2c3e50; margin-bottom: 15px; border-left: 4px solid #3498db; padding-left: 10px; }
+        .item { margin-bottom: 20px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .item-title { font-weight: 600; font-size: 1.1em; color: #2c3e50; }
+        .item-subtitle { font-weight: 500; color: #34495e; }
+        .item-date { color: #7f8c8d; font-size: 0.9em; }
+        .item-details { color: #555; margin-bottom: 8px; }
+        .highlights { margin-top: 8px; }
+        .highlight { margin-bottom: 5px; position: relative; padding-left: 20px; }
+        .highlight:before { content: "▸"; position: absolute; left: 0; color: #3498db; }
+        .skills { display: flex; flex-wrap: wrap; gap: 20px; }
+        .skill-category { flex: 1; min-width: 200px; }
+        .skill-name { font-weight: 600; color: #2c3e50; margin-bottom: 5px; }
+        .skill-keywords { color: #555; font-size: 0.9em; }
+        .summary { font-size: 1.05em; line-height: 1.7; color: #444; margin-bottom: 20px; text-align: justify; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .name { font-size: 2em; }
+            .item-header { flex-direction: column; align-items: flex-start; }
+            .item-date { margin-top: 5px; }
+            .skills { flex-direction: column; }
+        }
+        @media print {
+            body { font-size: 12pt; margin: 0; padding: 10px; }
+            .header { margin-bottom: 20px; }
+            .section { margin-bottom: 15px; page-break-inside: avoid; }
+            .item { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">Vincent Palmer</h1>
+        
+        <div class="contact">
+            <div>📧 <a href="mailto:shift@someone.section.me">shift@someone.section.me</a></div>
+            <div>📱 +49 173 2445094</div>
+            <div>📍 
+            Berlin
+            
+        </div>
+            <div>🌐 <a href="https://github.com/shift">https://github.com/shift</a></div>
+        </div>
+        
+    </header>
+
+    
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="summary">Senior SRE & Platform Engineering leader with 30+ years experience scaling infrastructure from startups to Fortune 500 environments. Specialize in Kubernetes, distributed systems, and enterprise platform engineering with track record of successful architecture implementation.</div>
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Independent Consultant & Architect</div>
+                    <div class="item-subtitle">Independent Consultant & Architect, Berlin, Germany</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Advised early-stage AI/Fintech startup on technical architecture, cloud infrastructure, and security practices under strict NDA.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Provided strategic technical consulting to early-stage AI/Fintech startup, advising on foundational architecture, cloud infrastructure, and security practices under strict NDA.</div>
+                
+                <div class="highlight">Researched and developed multiple advanced systems as personal projects, including a multi-RAFT distributed key-value store, an ML-powered HTTP/3 WAF, and an AI-native development platform.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Chief Architect</div>
+                    <div class="item-subtitle">MedTech Startup, Berlin</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Architected and led end-to-end implementation of greenfield prescription delivery platform, serving 10,000+ daily users with 99.95% uptime.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Led cross-functional team of 8 engineers through complete platform lifecycle from concept to production deployment.</div>
+                
+                <div class="highlight">Directed architectural strategy for HIPAA-compliant prescription management, achieving regulatory approval in 6 months.</div>
+                
+                <div class="highlight">Spearheaded French market expansion, implementing local compliance requirements and achieving 20% market penetration in first year.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Principal Kubernetes Engineer</div>
+                    <div class="item-subtitle">Feedzai SA, Coimbra</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s, achieving 99.9% availability and reducing infrastructure costs by 35%.</div>
+                
+                <div class="highlight">Pioneered Crossplane implementation for unified Infrastructure as Code platform, enabling seamless multi-cloud deployments across AWS, GCP, and on-premise with 40% reduction in provisioning time.</div>
+                
+                <div class="highlight">Transformed CI/CD and security paradigms, implementing software supply chain security (Attestations/SBOMs) and next-generation internal developer platform, reducing deployment time by 60%.</div>
+                
+                <div class="highlight">Established SRE practices including SLI/SLO design, error budget management, and automated incident response, reducing MTTR from 2 hours to 15 minutes.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Head of Systems & Infrastructure</div>
+                    <div class="item-subtitle">Booming Games Ltd, Berlin</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.</div>
+                
+                <div class="highlight">Engineered hybrid infrastructure spanning 5+ bare-metal datacenters and public clouds (AWS, GKE), implementing bare-metal Kubernetes clusters achieving 50% cost savings compared to managed cloud services.</div>
+                
+                <div class="highlight">Established comprehensive observability framework with Prometheus, Grafana, and ELK Stack, providing real-time insights into system performance and reducing incident detection time by 80%.</div>
+                
+                <div class="highlight">Implemented chaos engineering practices and automated failure recovery systems, improving system resilience and reducing unplanned downtime by 90%.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Cloud Architect</div>
+                    <div class="item-subtitle">KIWI.KI GmbH, Berlin</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture, achieving zero-downtime migration for apartment door access control system serving 10,000+ units.</div>
+                
+                <div class="highlight">Implemented comprehensive CI/CD pipeline from scratch using Jenkins and GitLab CI, reducing deployment time by 75% and eliminating manual deployment errors.</div>
+                
+                <div class="highlight">Executed critical Python 2 to Python 3 migration across entire codebase (50+ services), ensuring continued security support and improved performance by 30%.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Senior DevOps Engineer</div>
+                    <div class="item-subtitle">ChartMogul Ltd</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Championed DevOps methodologies and automation across engineering department.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Championed DevOps methodologies and automation across engineering department, fostering an agile culture that significantly accelerated development and deployment cycles.</div>
+                
+                <div class="highlight">Managed a diverse environment including early-adoption Kubernetes, Docker, and traditional VMs.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Systems Administrator</div>
+                    <div class="item-subtitle">Performance Horizon Group, Newcastle upon Tyne, UK</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Established formal change and release management process.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Established a formal change and release management process from ground up, implementing automated deployments to improve reliability and velocity.</div>
+                
+                <div class="highlight">Architected and deployed a highly available IDS/IPS/NSM solution to enhance platform security.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">DevOps Engineer & R&D</div>
+                    <div class="item-subtitle">Odobo Limited, Gibraltar</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Architected and implemented a continuous delivery platform.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Architected and implemented a continuous delivery platform integrating JIRA and Bitbucket, automating the full software delivery lifecycle.</div>
+                
+                <div class="highlight">Led successful consolidation of multiple configuration management tools into a single, unified Salt-based platform, improving consistency and reducing complexity.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">System Engineer</div>
+                    <div class="item-subtitle">William Hill Online, Gibraltar</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.</div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.</div>
+                
+                <div class="highlight">Engineered novel deployment techniques that reduced application downtime and streamlined release process.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Freelance Consultant</div>
+                    <div class="item-subtitle">ticki.sh, Newcastle upon Tyne, UK</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Freelance consulting services.</div>
+            
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Lead Architect</div>
+                    <div class="item-subtitle">The Amazing Group, Gateshead, UK</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Lead architectural responsibilities.</div>
+            
+            
+        </div>
+        
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title"></div>
+                    <div class="item-subtitle">Linux Community</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Courses: Linux user since 1994, Advanced Systems Programming expertise throughout career</div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title"></div>
+                    <div class="item-subtitle">Professional Development</div>
+                </div>
+                <div class="item-date">
+                     – Present
+                </div>
+            </div>
+            
+            <div class="item-details">Courses: 30+ years continuous professional development in emerging technologies</div>
+            
+        </div>
+        
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            
+            <div class="skill-category">
+                <div class="skill-name">Site Reliability Engineering</div>
+                
+                <div class="skill-keywords">SLO/SLI Design, Error Budget Management, Chaos Engineering, MTTR Reduction, Incident Response, Blameless Post-Mortems, Toil Automation</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Cloud & Containerization</div>
+                
+                <div class="skill-keywords">JavaScript, TypeScript, Node.js, React, Vue.js</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Infrastructure as Code</div>
+                
+                <div class="skill-keywords">Crossplane, Terraform, Salt, Ansible, Puppet, Helm</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">CI/CD & GitOps</div>
+                
+                <div class="skill-keywords">GitHub Actions, Jenkins, GitLab CI, ArgoCD, Flux, Pipeline Automation</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Observability & Monitoring</div>
+                
+                <div class="skill-keywords">Jenkins, GitLab CI, Terraform, Docker, Kubernetes</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Programming Languages</div>
+                
+                <div class="skill-keywords">Go, Python, Rust, Bash, C/C++, Perl, Ruby, Erlang, PHP, Java</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Security & Compliance</div>
+                
+                <div class="skill-keywords">Software Supply Chain (SBOMs, Attestations), HashiCorp Vault, IDS/IPS, PCI-DSS, Zero Trust</div>
+                
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-name">Platform Engineering</div>
+                
+                <div class="skill-keywords">Internal Developer Platforms (IDP), Developer Experience (DevEx), Service Mesh, Istio</div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Remote Gaming Server Platform</div>
+                    <div class="item-subtitle">Architected a production-grade, regulatory-aware RGS platform in Rust. The project's complexity and scale revealed critical gaps in existing tooling for AI development, security, and global deployment, leading to the creation of the following purpose-built solutions.</div>
+                </div>
+                
+            </div>
+            
+            <div class="highlights">
+                
+                <div class="highlight">Production-grade regulatory-aware platform architecture</div>
+                
+                <div class="highlight">Revealed critical gaps in AI development tooling</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">AI-Native Development Platform</div>
+                    <div class="item-subtitle">To overcome AI context limitations discovered during RGS development, engineered a novel platform featuring a semantic code server (MCP) and workflow management, enabling effective AI-assisted development on large-scale codebases.</div>
+                </div>
+                
+            </div>
+            
+            <div class="highlights">
+                
+                <div class="highlight">Semantic code server (MCP) integration</div>
+                
+                <div class="highlight">Workflow management for AI-assisted development</div>
+                
+                <div class="highlight">Large-scale codebase optimization</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Distributed Key-Value Store</div>
+                    <div class="item-subtitle">To enable RGS platform to operate globally with low latency, engineered a production-ready distributed K/V store in Rust. It features a Multi-Raft architecture for horizontal scalability and strong consistency (ACID), achieving sub-millisecond latency at 930+ ops/sec per partition. The system is built for operational excellence with a reproducible Nix build, Jepsen-style consistency testing, Prometheus metrics, and a high-performance gRPC API powered by a custom RPC library ('QuicCrunch').</div>
+                </div>
+                
+            </div>
+            
+            <div class="highlights">
+                
+                <div class="highlight">Multi-Raft architecture for horizontal scalability</div>
+                
+                <div class="highlight">Strong consistency (ACID)</div>
+                
+                <div class="highlight">Sub-millisecond latency at 930+ ops/sec per partition</div>
+                
+                <div class="highlight">Reproducible Nix build</div>
+                
+                <div class="highlight">Jepsen-style consistency testing</div>
+                
+                <div class="highlight">Prometheus metrics integration</div>
+                
+                <div class="highlight">High-performance gRPC API with custom RPC library</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">HTTP/3 Web Application Firewall</div>
+                    <div class="item-subtitle">Engineered an ultra-fast, memory-safe WAF in Rust to meet a compliance requirement for which no open-source solution existed. The system achieves 0.97ms median processing time at ~400k RPS. Key features include an AI/ML threat detection engine with 99.95% accuracy, Explainable AI (LIME/SHAP), enterprise-grade protections against SQLi (47ns detection) and XSS, and full OpenTelemetry integration for cloud-native observability.</div>
+                </div>
+                
+            </div>
+            
+            <div class="highlights">
+                
+                <div class="highlight">Ultra-fast memory-safe WAF in Rust</div>
+                
+                <div class="highlight">0.97ms median processing time at ~400k RPS</div>
+                
+                <div class="highlight">AI/ML threat detection engine with 99.95% accuracy</div>
+                
+                <div class="highlight">Explainable AI (LIME/SHAP)</div>
+                
+                <div class="highlight">Enterprise-grade SQLi (47ns detection) and XSS protection</div>
+                
+                <div class="highlight">Full OpenTelemetry integration</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">AI-Assisted Hardware Reverse Engineering</div>
+                    <div class="item-subtitle">The AI-native development platform is now being actively applied to accelerate reverse engineering of Allwinner sun50iw12p1 SoC, with public repository serving as a real-world demonstration of its capabilities.</div>
+                </div>
+                
+            </div>
+            
+            <div class="highlights">
+                
+                <div class="highlight">Active application to Allwinner sun50iw12p1 SoC reverse engineering</div>
+                
+                <div class="highlight">Public demonstration of AI-native platform capabilities</div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+
+</body>
+</html>

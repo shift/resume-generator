@@ -1,0 +1,150 @@
+---
+source: tests/template_snapshots.rs
+expression: html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test User - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #2c3e50; padding-bottom: 20px; }
+        .name { font-size: 2.5em; font-weight: 300; color: #2c3e50; margin-bottom: 5px; }
+        .contact { font-size: 0.9em; color: #7f8c8d; margin: 5px 0; }
+        .contact a { color: #3498db; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 1.3em; font-weight: 600; color: #2c3e50; margin-bottom: 15px; border-left: 4px solid #3498db; padding-left: 10px; }
+        .item { margin-bottom: 20px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .item-title { font-weight: 600; font-size: 1.1em; color: #2c3e50; }
+        .item-subtitle { font-weight: 500; color: #34495e; }
+        .item-date { color: #7f8c8d; font-size: 0.9em; }
+        .item-details { color: #555; margin-bottom: 8px; }
+        .highlights { margin-top: 8px; }
+        .highlight { margin-bottom: 5px; position: relative; padding-left: 20px; }
+        .highlight:before { content: "▸"; position: absolute; left: 0; color: #3498db; }
+        .skills { display: flex; flex-wrap: wrap; gap: 20px; }
+        .skill-category { flex: 1; min-width: 200px; }
+        .skill-name { font-weight: 600; color: #2c3e50; margin-bottom: 5px; }
+        .skill-keywords { color: #555; font-size: 0.9em; }
+        .summary { font-size: 1.05em; line-height: 1.7; color: #444; margin-bottom: 20px; text-align: justify; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .name { font-size: 2em; }
+            .item-header { flex-direction: column; align-items: flex-start; }
+            .item-date { margin-top: 5px; }
+            .skills { flex-direction: column; }
+        }
+        @media print {
+            body { font-size: 12pt; margin: 0; padding: 10px; }
+            .header { margin-bottom: 20px; }
+            .section { margin-bottom: 15px; page-break-inside: avoid; }
+            .item { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">Test User</h1>
+        
+        
+        <div class="contact">
+            <div>📧 <a href="mailto:test@example.com">test@example.com</a></div>
+            
+            
+            
+            
+        </div>
+        
+    </header>
+
+    
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="summary">Test summary for snapshot.</div>
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Engineer</div>
+                    <div class="item-subtitle">Test Corp</div>
+                </div>
+                <div class="item-date">
+                    2020 – Present
+                </div>
+            </div>
+            
+            
+            <div class="highlights">
+                
+                <div class="highlight">Led a team of 5.</div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            
+            <div class="skill-category">
+                <div class="skill-name">Testing</div>
+                
+                <div class="skill-keywords">Rust, proptest</div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+    <section class="section">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">test-project</div>
+                    <div class="item-subtitle">A test project.</div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</body>
+</html>

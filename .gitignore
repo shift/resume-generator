@@ -1,0 +1,47 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.pdf
+result
+.direnv
+
+# Rust
+Cargo.lock
+target/
+**/*.rs.bk
+
+# Nix
+result/
+.nix-shell.d
+
+# Build outputs
+build/
+dist/
+*.log
+
+# Quality check outputs
+quality-report.md
+
+# Nix stores
+quality-tools/
+
+# Node modules (if any)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local

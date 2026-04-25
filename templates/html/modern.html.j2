@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.basics.name }} - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #2c3e50; padding-bottom: 20px; }
+        .name { font-size: 2.5em; font-weight: 300; color: #2c3e50; margin-bottom: 5px; }
+        .contact { font-size: 0.9em; color: #7f8c8d; margin: 5px 0; }
+        .contact a { color: #3498db; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 1.3em; font-weight: 600; color: #2c3e50; margin-bottom: 15px; border-left: 4px solid #3498db; padding-left: 10px; }
+        .item { margin-bottom: 20px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .item-title { font-weight: 600; font-size: 1.1em; color: #2c3e50; }
+        .item-subtitle { font-weight: 500; color: #34495e; }
+        .item-date { color: #7f8c8d; font-size: 0.9em; }
+        .item-details { color: #555; margin-bottom: 8px; }
+        .highlights { margin-top: 8px; }
+        .highlight { margin-bottom: 5px; position: relative; padding-left: 20px; }
+        .highlight:before { content: "▸"; position: absolute; left: 0; color: #3498db; }
+        .skills { display: flex; flex-wrap: wrap; gap: 20px; }
+        .skill-category { flex: 1; min-width: 200px; }
+        .skill-name { font-weight: 600; color: #2c3e50; margin-bottom: 5px; }
+        .skill-keywords { color: #555; font-size: 0.9em; }
+        .summary { font-size: 1.05em; line-height: 1.7; color: #444; margin-bottom: 20px; text-align: justify; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .name { font-size: 2em; }
+            .item-header { flex-direction: column; align-items: flex-start; }
+            .item-date { margin-top: 5px; }
+            .skills { flex-direction: column; }
+        }
+        @media print {
+            body { font-size: 12pt; margin: 0; padding: 10px; }
+            .header { margin-bottom: 20px; }
+            .section { margin-bottom: 15px; page-break-inside: avoid; }
+            .item { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">{{ resume.basics.name }}</h1>
+        {% if resume.basics.label %}<div class="contact" style="font-size:1.1em; color:#34495e; margin-bottom:8px;">{{ resume.basics.label }}</div>{% endif %}
+        {% if resume.basics.email or resume.basics.phone or resume.basics.location %}
+        <div class="contact">
+            {% if resume.basics.email %}<div>📧 <a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a></div>{% endif %}
+            {% if resume.basics.phone %}<div>📱 {{ resume.basics.phone }}</div>{% endif %}
+            {% if resume.basics.location %}<div>📍 
+            {% if resume.basics.location.city %}{{ resume.basics.location.city }}{% endif %}
+            {% if resume.basics.location.countryCode %}, {{ resume.basics.location.countryCode }}{% endif %}
+        </div>{% endif %}
+            {% if resume.basics.url %}<div>🌐 <a href="{{ resume.basics.url }}">{{ resume.basics.url }}</a></div>{% endif %}
+            {% for profile in resume.basics.profiles %}<div>{{ profile.network }}: {% if profile.url %}<a href="{{ profile.url }}">{% if profile.username %}{{ profile.username }}{% else %}{{ profile.url }}{% endif %}</a>{% else %}{{ profile.username }}{% endif %}</div>{% endfor %}
+        </div>
+        {% endif %}
+    </header>
+
+    {% if resume.basics.summary %}
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="summary">{{ resume.basics.summary }}</div>
+    </section>
+    {% endif %}
+
+    {% if resume.work %}
+    <section class="section">
+        <h2 class="section-title">Work Experience</h2>
+        {% for job in resume.work %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{% if job.url %}<a href="{{ job.url }}">{{ job.position }}</a>{% else %}{{ job.position }}{% endif %}</div>
+                    <div class="item-subtitle">{{ job.name }}{% if job.location %}, {{ job.location }}{% endif %}</div>
+                </div>
+                <div class="item-date">
+                    {{ job.startDate }} – {% if job.endDate %}{{ job.endDate }}{% else %}Present{% endif %}
+                </div>
+            </div>
+            {% if job.summary %}
+            <div class="item-details">{{ job.summary }}</div>
+            {% endif %}
+            {% if job.highlights %}
+            <div class="highlights">
+                {% for highlight in job.highlights %}
+                <div class="highlight">{{ highlight }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.education %}
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        {% for edu in resume.education %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{% if edu.studyType %}{{ edu.studyType }}{% endif %}</div>
+                    <div class="item-subtitle">{{ edu.institution }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
+                </div>
+                <div class="item-date">
+                    {{ edu.startDate }} – {% if edu.endDate %}{{ edu.endDate }}{% else %}Present{% endif %}
+                </div>
+            </div>
+            {% if edu.courses %}
+            <div class="item-details">Courses: {{ edu.courses | join(sep=", ") }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.skills %}
+    <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            {% for skill in resume.skills %}
+            <div class="skill-category">
+                <div class="skill-name">{{ skill.name }}</div>
+                {% if skill.keywords %}
+                <div class="skill-keywords">{{ skill.keywords | join(sep=", ") }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if resume.projects %}
+    <section class="section">
+        <h2 class="section-title">Projects</h2>
+        {% for project in resume.projects %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{% if project.url %}<a href="{{ project.url }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</div>
+                    {% if project.description %}<div class="item-subtitle">{{ project.description }}</div>{% endif %}
+                </div>
+                {% if project.startDate or project.endDate %}
+                <div class="item-date">
+                    {% if project.startDate %}{{ project.startDate }}{% endif %}{% if project.startDate and project.endDate %} – {% endif %}{% if project.endDate %}{{ project.endDate }}{% endif %}
+                </div>
+                {% endif %}
+            </div>
+            {% if project.highlights %}
+            <div class="highlights">
+                {% for highlight in project.highlights %}
+                <div class="highlight">{{ highlight }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.volunteer %}
+    <section class="section">
+        <h2 class="section-title">Volunteer Experience</h2>
+        {% for vol in resume.volunteer %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{{ vol.position }}</div>
+                    <div class="item-subtitle">{{ vol.organization }}</div>
+                </div>
+                <div class="item-date">
+                    {{ vol.startDate }} – {% if vol.endDate %}{{ vol.endDate }}{% else %}Present{% endif %}
+                </div>
+            </div>
+            {% if vol.summary %}
+            <div class="item-details">{{ vol.summary }}</div>
+            {% endif %}
+            {% if vol.highlights %}
+            <div class="highlights">
+                {% for highlight in vol.highlights %}
+                <div class="highlight">{{ highlight }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.awards %}
+    <section class="section">
+        <h2 class="section-title">Awards</h2>
+        {% for award in resume.awards %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{{ award.title }}</div>
+                    {% if award.awarder %}<div class="item-subtitle">{{ award.awarder }}</div>{% endif %}
+                </div>
+                {% if award.date %}<div class="item-date">{{ award.date }}</div>{% endif %}
+            </div>
+            {% if award.summary %}
+            <div class="item-details">{{ award.summary }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.certificates %}
+    <section class="section">
+        <h2 class="section-title">Certifications</h2>
+        {% for cert in resume.certificates %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{{ cert.name }}</div>
+                    {% if cert.issuer %}<div class="item-subtitle">{{ cert.issuer }}</div>{% endif %}
+                </div>
+                {% if cert.date %}<div class="item-date">{{ cert.date }}</div>{% endif %}
+            </div>
+            {% if cert.url %}
+            <div class="item-details"><a href="{{ cert.url }}">{{ cert.url }}</a></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.publications %}
+    <section class="section">
+        <h2 class="section-title">Publications</h2>
+        {% for pub in resume.publications %}
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">{{ pub.name }}</div>
+                    {% if pub.publisher %}<div class="item-subtitle">{{ pub.publisher }}</div>{% endif %}
+                </div>
+                {% if pub.releaseDate %}<div class="item-date">{{ pub.releaseDate }}</div>{% endif %}
+            </div>
+            {% if pub.summary %}
+            <div class="item-details">{{ pub.summary }}</div>
+            {% endif %}
+            {% if pub.url %}
+            <div class="item-details"><a href="{{ pub.url }}">{{ pub.url }}</a></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if resume.languages %}
+    <section class="section">
+        <h2 class="section-title">Languages</h2>
+        <div class="skills">
+            {% for lang in resume.languages %}
+            <div class="skill-category">
+                <div class="skill-name">{{ lang.language }}</div>
+                <div class="skill-keywords">{{ lang.fluency }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if resume.interests %}
+    <section class="section">
+        <h2 class="section-title">Interests</h2>
+        <div class="skills">
+            {% for interest in resume.interests %}
+            <div class="skill-category">
+                <div class="skill-name">{{ interest.name }}</div>
+                {% if interest.keywords %}
+                <div class="skill-keywords">{{ interest.keywords | join(sep=", ") }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if resume.references %}
+    <section class="section">
+        <h2 class="section-title">References</h2>
+        {% for ref in resume.references %}
+        <div class="item">
+            <div class="item-title">{{ ref.name }}</div>
+            {% if ref.reference %}
+            <div class="item-details">{{ ref.reference }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+</body>
+</html>

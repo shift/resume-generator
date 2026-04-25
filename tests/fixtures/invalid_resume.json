@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "",
+    "label": "Software Engineer",
+    "summary": "A dedicated software engineer with 5 years of experience building reliable systems."
+  },
+  "work": [
+    {
+      "name": "Acme Corp",
+      "position": "Software Engineer",
+      "startDate": "2020",
+      "endDate": "Present",
+      "summary": "Built and maintained core platform services.",
+      "highlights": [
+        "Reduced deployment time by 40% through pipeline automation",
+        "Led migration of 20 services to Kubernetes"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["Rust", "Go", "Python"]
+    }
+  ]
+}

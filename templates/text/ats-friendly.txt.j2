@@ -1,0 +1,132 @@
+{{ resume.basics.name }}
+{% if resume.basics.label %}{{ resume.basics.label }}{% endif %}
+{% if resume.basics.email %}Email: {{ resume.basics.email }}{% endif %}
+{% if resume.basics.phone %}Phone: {{ resume.basics.phone }}{% endif %}
+{% if resume.basics.location %}
+{% if resume.basics.location.city %}Location: {{ resume.basics.location.city }}{% if resume.basics.location.countryCode %}, {{ resume.basics.location.countryCode }}{% endif %}{% endif %}
+{% if resume.basics.location.address %}Location: {{ resume.basics.location.address }}{% endif %}
+{% endif %}
+{% if resume.basics.url %}Website: {{ resume.basics.url }}{% endif %}
+{% for profile in resume.basics.profiles %}{% if profile.url %}{{ profile.network }}: {{ profile.url }}{% else %}{{ profile.network }}: {{ profile.username }}{% endif %}
+{% endfor %}
+
+PROFESSIONAL SUMMARY
+{{ resume.basics.summary }}
+
+WORK EXPERIENCE
+{% for job in resume.work %}
+{{ job.position }}
+{{ job.name }}, {% if job.location %}{{ job.location }}{% endif %}
+{{ job.startDate }} - {% if job.endDate %}{{ job.endDate }}{% else %}Present{% endif %}
+
+{% if job.summary %}{{ job.summary }}{% endif %}
+{% if job.url %}URL: {{ job.url }}{% endif %}
+{% if job.highlights %}
+{% for highlight in job.highlights %}
+• {{ highlight }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+
+{% if resume.education %}
+EDUCATION
+{% for edu in resume.education %}
+{% if edu.studyType %}{{ edu.studyType }}{% endif %}
+{{ edu.institution }}{% if edu.location %}, {{ edu.location }}{% endif %}
+{{ edu.startDate }} - {% if edu.endDate %}{{ edu.endDate }}{% else %}Present{% endif %}
+{% if edu.courses %}Courses: {{ edu.courses | join(sep=", ") }}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.skills %}
+SKILLS
+{% for skill in resume.skills %}
+{{ skill.name }}: {% if skill.keywords %}{{ skill.keywords | join(sep=", ") }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if resume.projects %}
+PROJECTS
+{% for project in resume.projects %}
+{{ project.name }}
+{% if project.description %}{{ project.description }}{% endif %}
+{% if project.startDate or project.endDate %}
+{% if project.startDate %}{{ project.startDate }}{% endif %}{% if project.startDate and project.endDate %} - {% endif %}{% if project.endDate %}{{ project.endDate }}{% endif %}
+{% endif %}
+{% if project.highlights %}
+{% for highlight in project.highlights %}
+- {{ highlight }}
+{% endfor %}
+{% endif %}
+{% if project.url %}URL: {{ project.url }}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.volunteer %}
+VOLUNTEER EXPERIENCE
+{% for vol in resume.volunteer %}
+{{ vol.position }}
+{{ vol.organization }}
+{{ vol.startDate }} - {% if vol.endDate %}{{ vol.endDate }}{% else %}Present{% endif %}
+
+{% if vol.summary %}{{ vol.summary }}{% endif %}
+{% if vol.highlights %}
+{% for highlight in vol.highlights %}
+- {{ highlight }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.awards %}
+AWARDS
+{% for award in resume.awards %}
+{{ award.title }}{% if award.awarder %} - {{ award.awarder }}{% endif %}{% if award.date %} ({{ award.date }}){% endif %}
+{% if award.summary %}{{ award.summary }}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.certificates %}
+CERTIFICATIONS
+{% for cert in resume.certificates %}
+{{ cert.name }}{% if cert.issuer %} - {{ cert.issuer }}{% endif %}{% if cert.date %} ({{ cert.date }}){% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.publications %}
+PUBLICATIONS
+{% for pub in resume.publications %}
+{{ pub.name }}{% if pub.publisher %} - {{ pub.publisher }}{% endif %}{% if pub.releaseDate %} ({{ pub.releaseDate }}){% endif %}
+{% if pub.summary %}{{ pub.summary }}{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if resume.languages %}
+LANGUAGES
+{% for lang in resume.languages %}
+{{ lang.language }}: {{ lang.fluency }}
+{% endfor %}
+{% endif %}
+
+{% if resume.interests %}
+INTERESTS
+{% for interest in resume.interests %}
+{{ interest.name }}{% if interest.keywords %}: {{ interest.keywords | join(sep=", ") }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if resume.references %}
+REFERENCES
+{% for ref in resume.references %}
+{{ ref.name }}
+{% if ref.reference %}{{ ref.reference }}{% endif %}
+
+{% endfor %}
+{% endif %}

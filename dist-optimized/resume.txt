@@ -1,0 +1,294 @@
+Vincent Palmer
+Email: shift@someone.section.me
+Phone: +49 173 2445094
+
+Location: Berlin
+Location: Berlin, Germany
+
+Website: https://github.com/shift
+
+PROFESSIONAL SUMMARY
+Senior SRE & Platform Engineering leader with 30+ years experience scaling infrastructure from startups to Fortune 500 environments. Specialize in Kubernetes, distributed systems, and enterprise platform engineering with track record of successful architecture implementation.
+
+WORK EXPERIENCE
+
+Independent Consultant & Architect
+Independent Consultant & Architect, Berlin, Germany
+ – Present
+
+Advised early-stage AI/Fintech startup on technical architecture, cloud infrastructure, and security practices under strict NDA.
+
+
+• Advised AI/Fintech startup on technical architecture, cloud infrastructure, and security strategy, enabling successful Series A funding round.
+
+• Engineered multi-RAFT distributed key-value store achieving 99.95% uptime across 3 data centers with 50% performance improvement over existing solutions.
+
+• Developed ML-powered HTTP/3 WAF with 99.9% accuracy rate and 10ms response time, reducing security incidents by 75%.
+
+
+
+
+Chief Architect
+MedTech Startup, Berlin
+ – Present
+
+Architected and led end-to-end implementation of greenfield prescription delivery platform, serving 10,000+ daily users with 99.95% uptime.
+
+
+• Architected scalable microservices platform supporting 10,000+ concurrent users with sub-second response times.
+
+• Led cross-functional team of 8 engineers through complete platform lifecycle from concept to production deployment.
+
+• Directed architectural strategy for HIPAA-compliant prescription management, achieving regulatory approval in 6 months.
+
+• Spearheaded French market expansion, implementing local compliance requirements and achieving 20% market penetration in first year.
+
+
+
+
+Principal Kubernetes Engineer
+Feedzai SA, Coimbra
+ – Present
+
+Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s.
+
+
+• Served as company Kubernetes Subject Matter Expert (SME), architecting migration of core FinTech platform to K8s, achieving 99.9% availability and reducing infrastructure costs by 35%.
+
+• Pioneered Crossplane implementation for unified Infrastructure as Code platform, enabling seamless multi-cloud deployments across AWS, GCP, and on-premise with 40% reduction in provisioning time.
+
+• Transformed CI/CD and security paradigms, implementing software supply chain security (Attestations/SBOMs) and next-generation internal developer platform, reducing deployment time by 60%.
+
+• Established SRE practices including SLI/SLO design, error budget management, and automated incident response, reducing MTTR from 2 hours to 15 minutes.
+
+
+
+
+Head of Systems & Infrastructure
+Booming Games Ltd, Berlin
+ – Present
+
+Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.
+
+
+• Built and led high-performing SRE, Test Automation, and Systems Administration teams (15+ engineers) ensuring 99.95% platform reliability for global B2B gaming platform serving 10M+ daily active users.
+
+• Engineered hybrid infrastructure spanning 5+ bare-metal datacenters and public clouds (AWS, GKE), implementing bare-metal Kubernetes clusters achieving 50% cost savings compared to managed cloud services.
+
+• Established comprehensive observability framework with Prometheus, Grafana, and ELK Stack, providing real-time insights into system performance and reducing incident detection time by 80%.
+
+• Implemented chaos engineering practices and automated failure recovery systems, improving system resilience and reducing unplanned downtime by 90%.
+
+
+
+
+Cloud Architect
+KIWI.KI GmbH, Berlin
+ – Present
+
+Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture.
+
+
+• Led complete migration of IoT infrastructure from legacy VMs to modern Kubernetes-based architecture, achieving zero-downtime migration for apartment door access control system serving 10,000+ units.
+
+• Implemented comprehensive CI/CD pipeline from scratch using Jenkins and GitLab CI, reducing deployment time by 75% and eliminating manual deployment errors.
+
+• Executed critical Python 2 to Python 3 migration across entire codebase (50+ services), ensuring continued security support and improved performance by 30%.
+
+
+
+
+Senior DevOps Engineer
+ChartMogul Ltd, 
+ – Present
+
+Championed DevOps methodologies and automation across engineering department.
+
+
+• Championed DevOps methodologies and automation across engineering department, fostering an agile culture that significantly accelerated development and deployment cycles.
+
+• Managed a diverse environment including early-adoption Kubernetes, Docker, and traditional VMs.
+
+
+
+
+Systems Administrator
+Performance Horizon Group, Newcastle upon Tyne, UK
+ – Present
+
+Established formal change and release management process.
+
+
+• Established a formal change and release management process from ground up, implementing automated deployments to improve reliability and velocity.
+
+• Architected and deployed a highly available IDS/IPS/NSM solution to enhance platform security.
+
+
+
+
+DevOps Engineer & R&D
+Odobo Limited, Gibraltar
+ – Present
+
+Architected and implemented a continuous delivery platform.
+
+
+• Architected and implemented a continuous delivery platform integrating JIRA and Bitbucket, automating the full software delivery lifecycle.
+
+• Led successful consolidation of multiple configuration management tools into a single, unified Salt-based platform, improving consistency and reducing complexity.
+
+
+
+
+System Engineer
+William Hill Online, Gibraltar
+ – Present
+
+Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.
+
+
+• Managed all production and pre-production deployments in a high-stakes, PCI-DSS compliant online gaming environment.
+
+• Engineered novel deployment techniques that reduced application downtime and streamlined release process.
+
+
+
+
+Freelance Consultant
+ticki.sh, Newcastle upon Tyne, UK
+ – Present
+
+Freelance consulting services.
+
+
+
+Lead Architect
+The Amazing Group, Gateshead, UK
+ – Present
+
+Lead architectural responsibilities.
+
+
+
+
+
+EDUCATION
+
+
+Linux Community
+ – Present
+Courses: Linux user since 1994, Advanced Systems Programming expertise throughout career
+
+
+
+Professional Development
+ – Present
+Courses: 30+ years continuous professional development in emerging technologies
+
+
+
+
+
+SKILLS
+
+Site Reliability Engineering: SLO/SLI Design, Error Budget Management, Chaos Engineering, MTTR Reduction, Incident Response, Blameless Post-Mortems, Toil Automation
+
+Cloud & Containerization: Kubernetes (K8s), Docker, AWS (EC2, EKS, Lambda, CloudWatch), Google Cloud (GCP, GKE), OpenStack, Bare-Metal Deployments
+
+Infrastructure as Code: Crossplane, Terraform, Salt, Ansible, Puppet, Helm
+
+CI/CD & GitOps: GitHub Actions, Jenkins, GitLab CI, ArgoCD, Flux, Pipeline Automation
+
+Observability & Monitoring: Prometheus, Grafana, ELK Stack, Jaeger, OpenTelemetry, Sensu, Zabbix, Distributed Tracing, AlertManager
+
+Programming Languages: Go, Python, Rust, Bash, C/C++, Perl, Ruby, Erlang, PHP, Java
+
+Security & Compliance: Software Supply Chain (SBOMs, Attestations), HashiCorp Vault, IDS/IPS, PCI-DSS, Zero Trust
+
+Platform Engineering: Internal Developer Platforms (IDP), Developer Experience (DevEx), Service Mesh, Istio
+
+
+
+
+PROJECTS
+
+Remote Gaming Server Platform
+Architected a production-grade, regulatory-aware RGS platform in Rust. The project's complexity and scale revealed critical gaps in existing tooling for AI development, security, and global deployment, leading to the creation of the following purpose-built solutions.
+
+
+
+• Production-grade regulatory-aware platform architecture
+
+• Revealed critical gaps in AI development tooling
+
+
+
+
+AI-Native Development Platform
+To overcome AI context limitations discovered during RGS development, engineered a novel platform featuring a semantic code server (MCP) and workflow management, enabling effective AI-assisted development on large-scale codebases.
+
+
+
+• Semantic code server (MCP) integration
+
+• Workflow management for AI-assisted development
+
+• Large-scale codebase optimization
+
+
+
+
+Distributed Key-Value Store
+To enable RGS platform to operate globally with low latency, engineered a production-ready distributed K/V store in Rust. It features a Multi-Raft architecture for horizontal scalability and strong consistency (ACID), achieving sub-millisecond latency at 930+ ops/sec per partition. The system is built for operational excellence with a reproducible Nix build, Jepsen-style consistency testing, Prometheus metrics, and a high-performance gRPC API powered by a custom RPC library ('QuicCrunch').
+
+
+
+• Multi-Raft architecture for horizontal scalability
+
+• Strong consistency (ACID)
+
+• Sub-millisecond latency at 930+ ops/sec per partition
+
+• Reproducible Nix build
+
+• Jepsen-style consistency testing
+
+• Prometheus metrics integration
+
+• High-performance gRPC API with custom RPC library
+
+
+
+
+HTTP/3 Web Application Firewall
+Engineered an ultra-fast, memory-safe WAF in Rust to meet a compliance requirement for which no open-source solution existed. The system achieves 0.97ms median processing time at ~400k RPS. Key features include an AI/ML threat detection engine with 99.95% accuracy, Explainable AI (LIME/SHAP), enterprise-grade protections against SQLi (47ns detection) and XSS, and full OpenTelemetry integration for cloud-native observability.
+
+
+
+• Ultra-fast memory-safe WAF in Rust
+
+• 0.97ms median processing time at ~400k RPS
+
+• AI/ML threat detection engine with 99.95% accuracy
+
+• Explainable AI (LIME/SHAP)
+
+• Enterprise-grade SQLi (47ns detection) and XSS protection
+
+• Full OpenTelemetry integration
+
+
+
+
+AI-Assisted Hardware Reverse Engineering
+The AI-native development platform is now being actively applied to accelerate reverse engineering of Allwinner sun50iw12p1 SoC, with public repository serving as a real-world demonstration of its capabilities.
+
+
+
+• Active application to Allwinner sun50iw12p1 SoC reverse engineering
+
+• Public demonstration of AI-native platform capabilities
+
+
+
+
